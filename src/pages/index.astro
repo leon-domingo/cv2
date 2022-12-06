@@ -151,8 +151,15 @@ const jobTitle = 'Developer'
   </aside>
 </Layout>
 
+<style>
+  :root {
+    --primary-background-color: #34495e;
+    --secondary-background-color: #6c7e8f;
+  }
+</style>
+
 <style lang="scss">
-  $asideBackgroundColor: #6c7e8f;
+  $asideBackgroundColor: var(--secondary-background-color);
 
   main {
     padding: 1rem;
@@ -164,7 +171,7 @@ const jobTitle = 'Developer'
     background-color: $asideBackgroundColor;
 
     .aside-inner {
-      padding: 0 1rem 1rem 1rem;
+      padding: 0 1rem 1rem;
     }
   }
 </style>

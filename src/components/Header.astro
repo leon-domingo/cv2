@@ -11,15 +11,12 @@ const { fullName, jobTitle } = Astro.props as HeaderProps
 <h2 class="job-title">{jobTitle}</h2>
 
 <style lang="scss">
-  $primaryBackgroundColor: #34495e;
-  $secondaryBackgroundColor: #6c7e8f;
-
   .full-name {
     display: inline-block;
     margin: 0;
     padding: 0.25rem 1rem;
     width: 100%;
-    background-color: $primaryBackgroundColor;
+    background-color: var(--primary-background-color);
     color: #fff;
     border-radius: 0.15rem;
     box-sizing: border-box;
@@ -32,7 +29,7 @@ const { fullName, jobTitle } = Astro.props as HeaderProps
     font-weight: 400;
     margin: 0.25rem 0 0;
     padding: 0.25rem 1rem;
-    background-color: $secondaryBackgroundColor;
+    background-color: var(--secondary-background-color);
     color: #fff;
     border-radius: 0.15rem;
   }

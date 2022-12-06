@@ -10,9 +10,8 @@ const { title } = Astro.props as SkillProps
 </article>
 
 <style lang="scss">
-  $primaryBackgroundColor: #34495e;
   $skillBackgroundColor: #fff;
-  $skillColor: $primaryBackgroundColor;
+  $skillColor: var(--primary-background-color);
 
   .skill {
     display: inline-block;
