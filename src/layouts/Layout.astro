@@ -1,0 +1,81 @@
+---
+export interface LayoutProps {
+  fullName: string
+  jobTitle: string
+}
+
+const { fullName, jobTitle } = Astro.props as LayoutProps
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{`${fullName} | ${jobTitle}`}</title>
+    <meta name="description" content="León Domingo | Developer" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="css/fontawesome-pro-6.2.1/css/fontawesome.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="css/fontawesome-pro-6.2.1/css/all.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="css/fontawesome-pro-6.2.1/css/brands.min.css"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div id="content">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
+
+  $innerWidth: 75em;
+  $htmlBackground: #eee;
+  $bodyBackground: #fff;
+
+  @mixin shadowBelow {
+    box-shadow: 0 10px 6px -6px #777;
+  }
+
+  html {
+    width: 100%;
+    background-color: $htmlBackground;
+
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+
+      a {
+        outline: none;
+      }
+
+      #content {
+        width: 100%;
+        max-width: $innerWidth;
+        margin: 4rem auto 2rem;
+        background-color: $bodyBackground;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto;
+      }
+    }
+  }
+</style>

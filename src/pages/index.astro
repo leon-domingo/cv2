@@ -1,0 +1,170 @@
+---
+import Layout from '../layouts/Layout.astro'
+import SectionTitle from '../components/SectionTitle.astro'
+import Header from '../components/Header.astro'
+import Intro from '../components/Intro.astro'
+import ProfessionalExperience from '../components/ProfessionalExperience.astro'
+import Education from '../components/Education.astro'
+import Contact from '../components/Contact.astro'
+import TechnicalSkills from '../components/TechnicalSkills.astro'
+import Languages from '../components/Languages.astro'
+import Author from '../components/Author.astro'
+
+const fullName = 'León Domingo'
+const jobTitle = 'Developer'
+---
+
+<Layout fullName={fullName} jobTitle={jobTitle}>
+  <main>
+    <Header fullName={fullName} jobTitle={jobTitle} />
+    <Intro />
+
+    <SectionTitle title="Professional experience" isProfessional />
+
+    <ProfessionalExperience
+      title="Fullstack React/Node Developer"
+      experienceType="contractor"
+      companyName="Infoser Technological Soluctions (Spain)"
+      items={[
+        'Frontend (React, Javascript/Typescript, HTML, JSS/SCSS, Redux/Saga, MaterialUI) and Backend/Middleware (Node, Express, Javascript/Typescript, PostgreSQL and/or 3rd party APIs) development for a german multinational motor-industry company on an app for sharing BigData sources between providers and consumers (data scientists)',
+        'Testing with Jest/Testing Library',
+        'Agile flow with SAFe/Scrum (JIRA, Confluence, Github, CI/CD)',
+        'PRs and code reviews',
+        'Fully remote',
+      ]}
+      startDate="Jan/2022"
+    />
+
+    <ProfessionalExperience
+      title="Fullstack React/Node Developer"
+      experienceType="contractor"
+      companyName="Tata Consultancy Services (Hungary)"
+      startDate="Aug/2021"
+      endDate="Jan/2022"
+      items={[
+        'Frontend (React/NextJS/JS, HTML, CSS) and Backend (ExpressJS, GraphQL, PostgreSQL, Contentful CMS, Salesforce) development for a global medical company',
+        'Agile workflow with Scrum (JIRA, Bitbucket, Confluence)',
+        'Code reviews & PRs',
+        'Junior devs mentoring',
+        'Fully remote',
+      ]}
+    />
+
+    <ProfessionalExperience
+      title="Frontend Developer"
+      experienceType="full-time"
+      companyName="Vector ITC (Spain)"
+      startDate="Apr/2021"
+      endDate="Jul/2021"
+      items={[
+        'Frontend development in Angular 10-12 for a big spanish bank in its UK division',
+        'Agile workflow',
+        'Code reviews & PRs',
+        'Fully remote',
+      ]}
+    />
+
+    <ProfessionalExperience
+      title="Senior Javascript Developer"
+      experienceType="full-time"
+      companyName="Serquo (Spain)"
+      startDate="Apr/2020"
+      endDate="Nov/2020"
+      items={[
+        'Frontend development in vanilla Javascript (ES2015+, classes, and no framework at all), partially implementing the Webcomponents technology, for a big spanish TV content-provider company on its LATAM market',
+        'Agile flow with Scrum and Atlassian suite (JIRA, Github, Confluence)',
+        'Code reviews & PRs',
+        'Fully remote',
+      ]}
+    />
+
+    <ProfessionalExperience
+      title="Frontend Developer"
+      experienceType="full-time"
+      companyName="Capgemini (Spain)"
+      startDate="Jan/2020"
+      endDate="Mar/2020"
+      items={[
+        'Frontend development with React',
+        'Agile flow with Scrum and Atlassian suite (JIRA, Github, Confluence)',
+        'Code reviews & PRs',
+      ]}
+    />
+
+    <ProfessionalExperience
+      title="Software Engineer"
+      experienceType="contractor"
+      companyName="RIDDLE&CODE (Austria)"
+      startDate="Feb/2017"
+      endDate="Dec/2019"
+      items={[
+        'Software development of solutions based on Blockchain using Python, Flask (HTTP JSON APIs) and IPDB/BigchainDB plus others (Docker, Docker-Compose, ...)',
+        'Frontend with Vue and the Flask HTTP/JSON API',
+        'Deployment of different services on AWS servers with Ubuntu machines',
+        'Code reviews & PRs',
+        'Fully remote',
+      ]}
+    />
+
+    <ProfessionalExperience
+      title="Cofounder / Developer"
+      experienceType="owner"
+      companyName="Codevince (Spain)"
+      startDate="Oct/2013"
+      endDate="May/2018"
+      items={[
+        'Python + PostgreSQL + MongoDB backend development',
+        'HTML/CSS + JS [Vue, AngularJS (1.X), React, ES2015+, jQuery, etc] frontend development',
+        'Wordpress development (PHP + HTML/CSS + JS [Vue/AngularJS/React], custom themes & plugins)',
+        'Node/Express + MongoDB backend development',
+        'Setting up Linux servers on several cloud providers with Ubuntu',
+        'Combinations of the above items...',
+        'Pair programming',
+      ]}
+    />
+
+    <ProfessionalExperience
+      title="Lead Developer"
+      experienceType="full-time"
+      companyName="Ender Aplicaciones (Spain)"
+      startDate="Jun/2005"
+      endDate="Oct/2013"
+      items={[
+        'Analysis and development of web projects using Turbogears2 (Python + PostgreSQL + jQuery + HTML + CSS)',
+        'Services and application deployment on different cloud providers using Ubuntu',
+        'Pair programming',
+      ]}
+    />
+
+    <SectionTitle title="Education" />
+    <Education />
+  </main>
+
+  <aside>
+    <div class="aside-inner">
+      <Contact title="Contact" />
+      <TechnicalSkills />
+      <Languages />
+    </div>
+
+    <Author fullName="León Domingo" />
+  </aside>
+</Layout>
+
+<style lang="scss">
+  $asideBackgroundColor: #6c7e8f;
+
+  main {
+    padding: 1rem;
+  }
+
+  aside {
+    position: relative;
+    text-align: right;
+    background-color: $asideBackgroundColor;
+
+    .aside-inner {
+      padding: 0 1rem 1rem 1rem;
+    }
+  }
+</style>

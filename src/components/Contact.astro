@@ -1,0 +1,113 @@
+---
+import SectionTitle from './SectionTitle.astro'
+
+export interface ContactProps {
+  title: string
+}
+
+const { title } = Astro.props as ContactProps
+---
+
+<SectionTitle title={title} />
+
+<ul class="contact">
+  <li class="contact__item">
+    <a href="mailto:leon.domingo@gmail.com">leon.domingo@gmail.com</a>
+    <span><i class="far fa-envelope"></i></span>
+  </li>
+
+  <li class="contact__item">
+    +34 666 89 25 48
+    <span><i class="far fa-mobile-android-alt"></i></span>
+  </li>
+
+  <li class="contact__item">
+    <a
+      href="https://www.linkedin.com/in/leon-domingo/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="underline"
+    >
+      leon-domingo
+    </a>
+    <span><i class="fab fa-linkedin"></i></span>
+  </li>
+
+  <li class="contact__item">
+    <a
+      href="https://github.com/leon-domingo"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="underline"
+    >
+      leon-domingo
+    </a>
+    <span><i class="fab fa-github"></i></span>
+  </li>
+
+  <li class="contact__item">
+    <a
+      href="https://twitter.com/leon__do_IT"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      @leon__do_IT
+    </a>
+    <span><i class="fab fa-twitter"></i></span>
+  </li>
+
+  <li class="contact__item">
+    Madrid, Spain
+    <span><i class="fas fa-map-marker"></i></span>
+  </li>
+
+  <li class="contact__item">
+    <a
+      href="https://github.com/leon-domingo/cv2"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="underline"
+    >
+      this CV source code
+    </a>
+    <span><i class="far fa-code"></i></span>
+  </li>
+</ul>
+
+<style lang="scss">
+  $contactLinkColor: #fff;
+  $contactIconColor: #10253a;
+
+  .contact {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+      font-size: 1rem;
+      color: #eee;
+      padding-right: 0.25rem;
+
+      span {
+        display: inline-block;
+        width: 1rem;
+        margin-left: 0.5rem;
+        text-align: center;
+      }
+
+      a {
+        color: $contactLinkColor;
+        font-weight: 300;
+        text-decoration: none;
+
+        &.underline {
+          text-decoration: underline;
+        }
+      }
+
+      i {
+        color: $contactIconColor;
+      }
+    }
+  }
+</style>

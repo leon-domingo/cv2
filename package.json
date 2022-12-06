@@ -1,0 +1,23 @@
+{
+  "name": "leon-domingo-cv",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build:pdf": "./generate-pdf.sh",
+    "build": "astro build && npm run build:pdf",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^1.6.13",
+    "sass": "^1.56.1"
+  },
+  "devDependencies": {
+    "args": "^5.0.3",
+    "prettier-plugin-astro": "^0.7.0",
+    "puppeteer": "^19.3.0"
+  }
+}

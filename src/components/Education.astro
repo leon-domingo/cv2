@@ -1,0 +1,65 @@
+<article class="education">
+  <div class="education__title">Computer Science degree</div>
+  <div class="education__subtitle">Universidad Politécnica de Madrid</div>
+  <div class="education__dates">
+    from <span>1996</span> to <span>2001</span>
+  </div>
+  <p class="education__description">
+    Just the period during which I acquired the theoretical foundations that
+    would help me achieve the professional skills of "real life". I came out
+    with no specific knowledge but I was ready to receive what it was coming.
+  </p>
+</article>
+
+<style lang="scss">
+  $primaryBackgroundColor: #34495e;
+
+  .education {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 0;
+    border-radius: 0.5rem;
+    background-color: #ddd;
+
+    &__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    &__subtitle {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #555;
+    }
+
+    &__dates {
+      position: absolute;
+      display: inline-block;
+      right: 1rem;
+      top: 0.5rem;
+      padding: 0 0.5rem;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9rem;
+      background-color: $primaryBackgroundColor;
+      color: #fff;
+      border-radius: 0.25rem;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &__description {
+      color: #444;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.8rem;
+      line-height: 1;
+      margin: 0.5rem 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+</style>

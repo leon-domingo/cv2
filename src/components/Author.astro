@@ -1,0 +1,36 @@
+---
+export interface AuthorProps {
+  fullName: string
+}
+
+const { fullName } = Astro.props as AuthorProps
+
+const currentYear = new Date().getFullYear()
+---
+
+<a
+  class="author"
+  href="https://www.linkedin.com/in/leon-domingo/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i class="fal fa-feather-alt"></i>&nbsp;
+  {fullName} · {currentYear}
+</a>
+
+<style lang="scss">
+  $primaryBackgroundColor: #34495e;
+
+  .author {
+    display: inline-block;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1rem;
+    background-color: $primaryBackgroundColor;
+    color: #fff;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+</style>

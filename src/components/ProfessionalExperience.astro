@@ -1,0 +1,121 @@
+---
+export interface ProfessionalExperienceProps {
+  title: string
+  experienceType: 'contractor' | 'full-time' | 'owner'
+  companyName: string
+  startDate: string
+  endDate?: string
+  items: string[]
+}
+
+const { title, experienceType, companyName, items, startDate, endDate } =
+  Astro.props as ProfessionalExperienceProps
+---
+
+<article class="professional-experience">
+  <div class="professional-experience__title">
+    {title}
+    <span class="employment-type">[{experienceType}]</span>
+  </div>
+  <div class="professional-experience__subtitle">
+    {companyName}
+  </div>
+  <div class="professional-experience__dates">
+    {
+      endDate ? (
+        <>
+          from <span>{startDate}</span> to <span>{endDate}</span>
+        </>
+      ) : (
+        <>
+          from <span>{startDate}</span>
+        </>
+      )
+    }
+  </div>
+  <ul class="professional-experience__items">
+    {items.map(item => <li>{item}</li>)}
+  </ul>
+</article>
+
+<style lang="scss">
+  $primaryBackgroundColor: #34495e;
+
+  .professional-experience {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0 0;
+    border-radius: 0.5rem;
+    background-color: #ddd;
+
+    &__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+
+      .employment-type {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #333;
+      }
+    }
+
+    &__subtitle {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #555;
+    }
+
+    &__dates {
+      position: absolute;
+      display: inline-block;
+      right: 1rem;
+      top: 0.5rem;
+      padding: 0 0.5rem;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9rem;
+      background-color: $primaryBackgroundColor;
+      color: #fff;
+      border-radius: 0.25rem;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &__short-description {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 0.9;
+      color: #444;
+      margin: 0.25rem 0;
+      background-color: #eee;
+      padding: 0.25rem;
+    }
+
+    &__description {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.8rem;
+      line-height: 1;
+      margin: 0.5rem 0;
+      color: #444;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__items {
+      margin: 0.5rem 1rem;
+      padding: 0;
+
+      li {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.9rem;
+        line-height: 1;
+        margin-bottom: 2px;
+        color: #444;
+      }
+    }
+  }
+</style>

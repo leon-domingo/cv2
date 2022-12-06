@@ -1,0 +1,29 @@
+---
+export interface SectionTitleProps {
+  title: string
+  isProfessional: boolean
+}
+
+const { title, isProfessional } = Astro.props as SectionTitleProps
+const className = `section-title ${
+  isProfessional ? 'section-title__professional-experience' : ''
+}`
+---
+
+<h3 class={className}>
+  {title}
+</h3>
+
+<style lang="scss">
+  .section-title {
+    font-weight: 400;
+    padding: 0.25rem 1rem;
+    background-color: #20374d;
+    color: #eee;
+    border-radius: 0.25rem;
+
+    &__professional-experience {
+      margin-top: 1.7rem;
+    }
+  }
+</style>
