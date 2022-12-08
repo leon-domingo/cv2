@@ -47,6 +47,7 @@ const { title, experienceType, companyName, items, startDate, endDate } =
     background-color: #ddd;
 
     &__title {
+      font-family: var(--variable-font);
       font-size: 1.1rem;
       font-weight: 600;
       color: #333;
@@ -69,8 +70,8 @@ const { title, experienceType, companyName, items, startDate, endDate } =
       display: inline-block;
       right: 1rem;
       top: 0.5rem;
-      padding: 0 0.5rem;
-      font-family: 'Open Sans', sans-serif;
+      padding: 0.25rem 0.5rem;
+      font-family: var(--regular-font);
       font-size: 0.9rem;
       background-color: var(--primary-background-color);
       color: #fff;
@@ -82,17 +83,17 @@ const { title, experienceType, companyName, items, startDate, endDate } =
     }
 
     &__short-description {
-      font-family: 'Open Sans', sans-serif;
+      font-family: var(--regular-font);
       font-size: 1rem;
       line-height: 0.9;
-      color: #444;
+      color: #222;
       margin: 0.25rem 0;
       background-color: #eee;
       padding: 0.25rem;
     }
 
     &__description {
-      font-family: 'Open Sans', sans-serif;
+      font-family: var(--regular-font);
       font-size: 0.8rem;
       line-height: 1;
       margin: 0.5rem 0;
@@ -108,7 +109,7 @@ const { title, experienceType, companyName, items, startDate, endDate } =
       padding: 0;
 
       li {
-        font-family: 'Open Sans', sans-serif;
+        font-family: var(--regular-font);
         font-size: 0.9rem;
         line-height: 1;
         margin-bottom: 2px;
