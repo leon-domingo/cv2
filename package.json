@@ -12,12 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.6.13",
-    "sass": "^1.56.1"
+    "astro": "^1.8.0",
+    "sass": "^1.57.1"
   },
   "devDependencies": {
     "args": "^5.0.3",
     "prettier-plugin-astro": "^0.7.0",
-    "puppeteer": "^19.4.0"
+    "puppeteer": "^19.4.1"
   }
 }
