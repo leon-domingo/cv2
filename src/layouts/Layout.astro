@@ -13,7 +13,7 @@ const { fullName, jobTitle } = Astro.props as LayoutProps
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{`${fullName} | ${jobTitle}`}</title>
-    <meta name="description" content="León Domingo | Developer" />
+    <meta name="description" content={`${fullName} | ${jobTitle}`} />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="satoshi/css/satoshi.css" />
