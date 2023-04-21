@@ -6,18 +6,18 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "build": "astro build",
     "build:pdf": "./generate-pdf.sh",
-    "build": "astro build && npm run build:pdf",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.6",
-    "sass": "^1.58.0"
+    "astro": "^2.3.0",
+    "sass": "^1.62.0"
   },
   "devDependencies": {
     "args": "^5.0.3",
     "prettier-plugin-astro": "^0.8.0",
-    "puppeteer": "^19.6.3"
+    "puppeteer": "^19.10.1"
   }
 }
