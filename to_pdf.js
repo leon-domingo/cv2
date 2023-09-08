@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer'
 ;(async () => {
   let browser
   try {
-    browser = await puppeteer.launch()
+    browser = await puppeteer.launch({ headless: 'new' })
     const page = await browser.newPage()
 
     args
